@@ -9,3 +9,9 @@
     name: "{{ pip_packages }}"
     extra_args: --user --break-system-packages
     state: present
+
+- name: Install pipx packages
+  community.general.pipx:
+    name: "{{ item }}"
+    state: install
+  loop: "{{ pipx_packages }}"

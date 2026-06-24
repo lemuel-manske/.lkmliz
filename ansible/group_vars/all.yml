@@ -30,6 +30,7 @@ apt_packages:
   - python3
   - python3-pip
   - python3-venv
+  - python3-pipx
   - stow
   - golang-go
 
@@ -46,6 +47,8 @@ npm_globals:
 pip_packages:
   - pynvim
   - debugpy
+
+pipx_packages: []
 
 go_tools:
   - package: golang.org/x/tools/gopls@latest
