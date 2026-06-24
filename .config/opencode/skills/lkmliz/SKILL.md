@@ -16,8 +16,6 @@ Use me whenever changing code.
 
 Lemuel has strong opinions about code style, and he wants to write code that is consistent with his style and opinions.
 
-Let's start simple: Testing.
-
 ## Comments
 
 Lemuel don't like comments, he prefer to write code that is self-explanatory and easy to understand without the need of comments.
