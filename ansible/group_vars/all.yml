@@ -29,8 +29,8 @@ apt_packages:
   - cmake
   - python3
   - python3-pip
+  - pipx
   - python3-venv
-  - python3-pipx
   - stow
   - golang-go
 
