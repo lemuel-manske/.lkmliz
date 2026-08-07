@@ -27,7 +27,7 @@ if [ ! -d "$HOME/.files" ]; then
 fi
 
 echo "==> Installing Galaxy collections..."
-ansible-galaxy collection install -r "$HOME/.files/ansible/requirements.yml"
+sudo ansible-galaxy collection install -r "$HOME/.files/ansible/requirements.yml"
 
 echo "==> Running playbook..."
-ansible-playbook "$HOME/.files/ansible/playbook.yml" -i "$HOME/.files/ansible/inventory"
+sudo ansible-playbook "$HOME/.files/ansible/playbook.yml" -i "$HOME/.files/ansible/inventory"
