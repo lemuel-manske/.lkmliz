@@ -32,8 +32,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-export PATH="$HOME/.nvm/versions/node/v24.12.0/bin:$PATH"
-
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
@@ -50,11 +48,9 @@ fi
 
 export EDITOR="nvim"
 
-export PATH=~/.opencode/bin:/opt/nvim:/opt/obsidian:$PATH
+export PATH=/opt/nvim:/opt/obsidian:$PATH
 
-export PATH=/opt/sqlcl/bin:$PATH
-
-export PATH=$HOME/.devcontainers/bin:$PATH
+export PATH=/opt/sqlcl/current/bin:$PATH
 
 export PATH=/usr/local/go/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
