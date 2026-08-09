@@ -1,0 +1,92 @@
+user: lkmliz
+user_home: /home/lkmliz
+
+packages:
+  - cmake
+  - curl
+  - fd-find
+  - fzf
+  - g++
+  - gcc
+  - git
+  - golang-go
+  - gzip
+  - libfuse2
+  - make
+  - pipx
+  - python3
+  - python3-pip
+  - python3-venv
+  - ripgrep
+  - tar
+  - tmux
+  - unzip
+  - wget
+  - xclip
+  - xdg-utils
+  - zip
+  - zsh
+
+nvim:
+  install_url: https://github.com/neovim/neovim/releases/download/v0.12.2/nvim-linux-arm64.appimage
+
+  npm_packages:
+    - eslint_d
+    - neovim
+    - prettier
+    - pyright
+    - tree-sitter-cli
+    - typescript
+    - typescript-language-server
+    - yarn
+
+  pip_packages:
+    - debugpy
+    - pynvim
+
+
+omz:
+  install_url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+
+  plugins:
+    zsh-autosuggestions:
+      repo: https://github.com/zsh-users/zsh-autosuggestions
+      dest: /home/lkmliz/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+    zsh-syntax-highlighting:
+      repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+      dest: /home/lkmliz/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+    powerlevel10k:
+      repo: https://github.com/romkatv/powerlevel10k.git
+      dest: /home/lkmliz/.oh-my-zsh/custom/themes/powerlevel10k
+
+dotfiles:
+  repo: https://github.com/lemuel-manske/.lkmliz
+  dest: /home/lkmliz/.files
+
+  to_loop:
+    - .aliases
+    - .config
+    - .hushlogin
+    - .p10k.zsh
+    - .profile
+    - .tmux.conf
+    - .zshrc
+
+node:
+  nvm:
+    install_url: https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh
+
+sdkman:
+  install_url: https://get.sdkman.io
+
+opencode:
+  install_url: https://opencode.ai/install
+
+pyenv:
+  install_url: https://pyenv.run
+
+git:
+  name: lemuel-manske
+  email: lemuelkaue@gmail.com

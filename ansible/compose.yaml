@@ -1,0 +1,7 @@
+services:
+  ansible:
+    build: .
+    working_dir: /ansible
+    volumes:
+      - .:/ansible
+    command: ansible-playbook -i inventory.ini playbook.yaml
