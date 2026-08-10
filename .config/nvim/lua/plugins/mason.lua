@@ -17,18 +17,25 @@ return {
     dependencies = { "mason-org/mason.nvim" },
     opts = {
       ensure_installed = {
-        "eslint_d",
         "gopls",
-        "java-debug-adapter",
-        "java-test",
         "jdtls",
         "jsonls",
         "lua_ls",
-        "prettier",
         "pyright",
-        "pyright",
-        "stylua",
         "ts_ls",
+      },
+    },
+  },
+
+  {
+    "mason-org/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "eslint_d",
+        "java-debug-adapter",
+        "java-test",
+        "prettier",
+        "stylua",
       },
     },
   },
