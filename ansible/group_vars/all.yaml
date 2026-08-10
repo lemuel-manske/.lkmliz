@@ -28,7 +28,7 @@ packages:
   - zsh
 
 nvim:
-  install_url: https://github.com/neovim/neovim/releases/download/v0.12.2/nvim-linux-arm64.appimage
+  install_url: https://github.com/neovim/neovim/releases/download/v0.12.2/nvim-linux-x86_64.appimage
 
   npm_packages:
     - eslint_d
