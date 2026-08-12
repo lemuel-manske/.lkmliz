@@ -1,0 +1,28 @@
+- name: zsh - download omz installer
+  ansible.builtin.get_url:
+    url: "{{ omz.install_url }}"
+    dest: /tmp/install-oh-my-zsh.sh
+    mode: "0755"
+
+- name: zsh - install omz 
+  ansible.builtin.command:
+    cmd: /tmp/install-oh-my-zsh.sh
+  args:
+    creates: "{{ user_home }}/.oh-my-zsh"
+  environment:
+    HOME: "{{ user_home }}"
+
+- name: zsh - install omz plugins
+  ansible.builtin.git:
+    clone: true
+    repo: "{{ item.value.repo }}"
+    dest: "{{ item.value.dest }}"
+  loop: "{{ omz.plugins | dict2items }}"
+  environment:
+    HOME: "{{ user_home }}"
+
+- name: zsh - set zsh as default shell
+  become: true
+  ansible.builtin.user:
+    name: "{{ user }}"
+    shell: /usr/bin/zsh

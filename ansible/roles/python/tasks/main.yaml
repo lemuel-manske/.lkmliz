@@ -1,0 +1,15 @@
+- name: python - install tooling
+  ansible.builtin.shell: >
+    python3 -m pip install --user --break-system-packages {{ nvim.pip_packages | join(' ') }}
+  environment:
+    HOME: "{{ user_home }}"
+  changed_when: false
+
+
+- name: python - install pyenv
+  ansible.builtin.shell: >
+    curl -fsSL {{ pyenv.install_url }} | bash
+  args:
+    creates: "{{ user_home }}/.pyenv"
+  environment:
+    HOME: "{{ user_home }}"

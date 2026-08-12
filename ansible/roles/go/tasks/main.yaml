@@ -1,0 +1,17 @@
+- name: go - install gopls
+  ansible.builtin.shell: go install golang.org/x/tools/gopls@latest
+
+  args:
+    creates: "{{ user_home }}/go/bin/gopls"
+
+  environment:
+    HOME: "{{ user_home }}"
+
+- name: go - install goimports
+  ansible.builtin.shell: go install golang.org/x/tools/cmd/goimports@latest
+
+  args:
+    creates: "{{ user_home }}/go/bin/goimports"
+
+  environment:
+    HOME: "{{ user_home }}"

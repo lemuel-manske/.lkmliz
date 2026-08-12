@@ -1,0 +1,7 @@
+- name: opencode - install
+  ansible.builtin.shell: >
+    curl -fsSL {{ opencode.install_url }} | bash -s -- --no-modify-path
+  args:
+    creates: "{{ user_home }}/.opencode"
+  environment:
+    HOME: "{{ user_home }}"

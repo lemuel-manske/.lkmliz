@@ -1,0 +1,15 @@
+omz:
+  install_url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+
+  plugins:
+    zsh-autosuggestions:
+      repo: https://github.com/zsh-users/zsh-autosuggestions
+      dest: /home/lkmliz/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+    zsh-syntax-highlighting:
+      repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+      dest: /home/lkmliz/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+    powerlevel10k:
+      repo: https://github.com/romkatv/powerlevel10k.git
+      dest: /home/lkmliz/.oh-my-zsh/custom/themes/powerlevel10k

@@ -1,0 +1,25 @@
+packages:
+  - cmake
+  - curl
+  - fd-find
+  - fzf
+  - g++
+  - gcc
+  - git
+  - golang-go
+  - gzip
+  - libfuse2
+  - make
+  - pipx
+  - python3
+  - python3-pip
+  - python3-venv
+  - ripgrep
+  - tar
+  - tmux
+  - unzip
+  - wget
+  - xclip
+  - xdg-utils
+  - zip
+  - zsh

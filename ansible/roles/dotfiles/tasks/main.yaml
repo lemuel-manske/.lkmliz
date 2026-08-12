@@ -1,0 +1,17 @@
+- name: dotfiles - clone repository
+  ansible.builtin.git:
+    repo: "{{ dotfiles.repo }}"
+    dest: "{{ dotfiles.dest }}"
+    clone: true
+    update: true
+
+  environment:
+    HOME: "{{ user_home }}"
+
+- name: dotfiles - symlink
+  ansible.builtin.file:
+    src: "{{ dotfiles.dest }}/{{ item }}"
+    dest: "{{ user_home }}/{{ item }}"
+    state: link
+    force: true
+  loop: "{{ dotfiles.to_loop }}"

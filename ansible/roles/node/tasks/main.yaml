@@ -1,0 +1,30 @@
+- name: node - install nvm
+  ansible.builtin.shell: >
+    curl -o- {{ node.nvm.install_url }} | bash
+  args:
+    creates: "{{ user_home }}/.nvm/nvm.sh"
+  environment:
+    HOME: "{{ user_home }}"
+    NVM_NO_UPDATE_PROFILE: "1"
+
+
+- name: node - install lts
+  ansible.builtin.shell: |
+    source "{{ user_home }}/.nvm/nvm.sh"
+    nvm install --lts
+    nvm alias default 'lts/*'
+  args:
+    executable: /bin/bash
+    creates: "{{ user_home }}/.nvm/alias/default"
+  environment:
+    HOME: "{{ user_home }}"
+
+- name: node - install node tooling
+  ansible.builtin.shell: |
+    source "{{ user_home }}/.nvm/nvm.sh"
+    npm install -g {{ nvim.npm_packages | join(' ') }}
+  args:
+    executable: /bin/bash
+  environment:
+    HOME: "{{ user_home }}"
+  changed_when: false

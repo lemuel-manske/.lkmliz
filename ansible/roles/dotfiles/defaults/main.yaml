@@ -1,0 +1,12 @@
+dotfiles:
+  repo: https://github.com/lemuel-manske/.lkmliz
+  dest: /home/lkmliz/.files
+
+  to_loop:
+    - .aliases
+    - .config
+    - .hushlogin
+    - .p10k.zsh
+    - .profile
+    - .tmux.conf
+    - .zshrc

@@ -1,0 +1,19 @@
+- name: git - setup username
+  community.general.git_config:
+    name: user.name
+    value: "{{ git.name }}"
+    scope: global
+    state: present
+
+  environment:
+    HOME: "{{ user_home }}"
+
+- name: git - setup email
+  community.general.git_config:
+    name: user.email
+    value: "{{ git.email }}"
+    scope: global
+    state: present
+
+  environment:
+    HOME: "{{ user_home }}"

@@ -1,0 +1,19 @@
+- name: neovim - create installation directory
+  ansible.builtin.file:
+    path: /opt/nvim
+    state: directory
+    mode: "0755"
+
+- name: neovim - download appimage
+  ansible.builtin.get_url:
+    url: "{{ nvim.install_url }}"
+    dest: /opt/nvim/nvim
+    mode: "0755"
+    force: false
+
+- name: neovim - symlink
+  ansible.builtin.file:
+    src: /opt/nvim/nvim
+    dest: /usr/local/bin/nvim
+    state: link
+    force: true

@@ -1,0 +1,16 @@
+nvim:
+  install_url: https://github.com/neovim/neovim/releases/download/v0.12.2/nvim-linux-x86_64.appimage
+
+  npm_packages:
+    - eslint_d
+    - neovim
+    - prettier
+    - pyright
+    - tree-sitter-cli
+    - typescript
+    - typescript-language-server
+    - yarn
+
+  pip_packages:
+    - debugpy
+    - pynvim
