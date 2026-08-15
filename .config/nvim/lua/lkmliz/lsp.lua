@@ -12,16 +12,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 vim.lsp.config("jsonls", {})
 
-vim.lsp.config("lua_ls", {
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim" },
-      },
-    },
-  },
-})
-
 
 
 vim.keymap.set("n", "<leader>dA", function()
