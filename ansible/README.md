@@ -2,7 +2,7 @@
 
 ## WSL setup caveat: sudo and Ansible
 
-On Ubuntu 24.04/25.x WSL installations using `sudo-rs`, Ansible's local `become` handling may fail with:
+On Ubuntu 24.04 WSL installations using `sudo-rs`, Ansible's local `become` handling may fail with:
 
 ```text
 Task failed: Premature end of stream waiting for become success.
@@ -11,7 +11,8 @@ sudo: interactive authentication is required
 
 This can happen even though regular `sudo` works correctly.
 
-The Ansible playbook runs against the local WSL machine and requires root privileges. The Docker setup already configures the `lkmliz` user with passwordless sudo, so the WSL environment should use the same configuration.
+The Ansible playbook runs against the local WSL machine and requires root privileges.
+The Docker setup already configures the `lkmliz` user with passwordless sudo, so the WSL environment should use the same configuration.
 
 ### Fix
 
